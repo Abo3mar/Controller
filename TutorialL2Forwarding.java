@@ -261,7 +261,7 @@ public class TutorialL2Forwarding implements IListenDataPacket {
         match.setField( new MatchField(MatchType.DL_DST, dstMAC.clone()) );
         // List of actions
         List<Action> actions = new ArrayList<Action>();
-        // Adding an output action
+        // Adding an output action to the list of actions
         actions.add(new Output(outgoing_connector));
         // Now after creating the match and actions, create the flow
         Flow f = new Flow(match, actions);
